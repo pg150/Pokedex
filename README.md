@@ -6,3 +6,9 @@ Sur le plan visuel, je n'ai que très peu fait de CSS car je n'ai jamais vraimen
 En reprenant le sujet, j'ai vu qu'une partie concernait les observables. N'ayant pas fait ça directement j'ai préféré continuer comme je le faisais. Cependant, je pense que l'ajout d'un observable aurait pu me permettre d'actualiser les statistiques de mon Pokémon sans avoir à réutiliser mon bouton "go". Par conséquent, dans le cadre d'un projet futur, je pense que je chercherai à appliquer cette notion pour avoir un résultat peut-être plus fluide et intuitif.
 
 Pour conclure, ce petit projet aura été intéressant pour moi car il m'aura permis de découvrir Angular et de travailler avec les concepts importants de cette technologie. L'autonomie m'aura surement pénalisé par rapport à d'autres connaissant déjà Angular, cependant je pense avoir réussi à m'en sortir en présentant un rendu correspondant aux attentes du sujet. Comme nous sommes amenés à travailler sur des applications web tôt dans l'année en ESIR2, ce module serait peut-être bénéfique s'il pouvait commencer un peu plus tôt.
+
+
+Pour utiliser l'application :
+- entrer le nom d'un Pokémon voulu ou utiliser la flèche pour afficher la liste complète
+- une fois le nom choisi appuyer sur "Go"
+- un bouton permet alors d'afficher plus d'informations sur le Pokémon sélectionné, on peut masquer ces stats si voulu
