@@ -1,0 +1,49 @@
+<!--<p>
+  Recherchez le Pokémon souhaité :
+ </p>
+ 
+ <p>
+  <input [(ngModel)]="id" id="pokeCherche">
+ </p>
+ 
+ <p>
+  <input [(ngModel)]="id" id="pokeCherche" [readonly]="true">
+ </p>-->
+<div>
+    <p-autoComplete [(ngModel)]="poke" [suggestions]="filteredPokemons" (completeMethod)="filterPokemons($event)"
+        [size]="30" [minLength]="1" placeholder="Recherchez le Pokémon souhaité" [dropdown]="true">
+        <ng-template let-poke pTemplate="item">
+            <div class="ui-helper-clearfix" style="border-bottom:1px solid #D5D5D5">
+                <div style="font-size:18px;float:left;margin:10px 10px 0 0">{{poke.name}}</div>
+            </div>
+        </ng-template>
+    </p-autoComplete>
+    <p-button icon="pi pi-check" iconPos="right" label="Go" (onClick)="go()"></p-button>
+</div>
+<div>
+    <br>
+    <span class=text style="margin-top:100px">Pokemon choisi : {{poke.name||''}}</span>
+    <span class=text style="margin-left: 50px; margin-top: 100px">Pokemon n° : {{poke.id||''}}</span>
+</div>
+<div *ngIf="unPoke">
+    <img src={{poke.picFront}} height="200" width="200">
+    <img src={{poke.picBack}} height="200" width="200">
+</div>
+
+<p *ngIf="unPoke && !unBouton">
+    <p-button icon="pi pi-arrow-down" iconPos="right" label="Afficher les statistiques de {{poke.name}}"
+        (onClick)="afficherStats()" id="statsBtn"></p-button>
+</p>
+<p *ngIf="unBouton">
+        <p-button icon="pi pi-arrow-up" iconPos="right" label="Masquer les statistiques de {{poke.name}}"
+            (onClick)="afficherStats()" id="!statsBtn"></p-button>
+    </p>
+
+<div *ngIf="affStats" style="text-align:center; margin-top: 10px">
+    <app-stats-component></app-stats-component>
+</div>
+
+
+<!--<p>
+    <input [(ngModel)]="poke.id" [readonly]="true">
+</p>-->

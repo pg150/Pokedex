@@ -1,0 +1,20 @@
+<div class="ui-g">
+  <div class="ui-g-3">
+    <div class=text>
+      Type(s) :
+      <br>
+      <br>
+      {{this.lesPokes.poke.types[0]}}
+      <br>
+      {{this.lesPokes.poke.types[1]}}
+      <!--Un Pokémon ne peut pas avoir qu'un ou deux type(s), ce n'est donc pas gênant de l'écrire en dur-->
+    </div>
+  </div>
+
+  <div class="ui-g-9">
+    <div style="padding: 10px">
+      <p-chart type="polarArea" [data]="data"></p-chart>
+    </div>
+  </div>
+
+</div>
